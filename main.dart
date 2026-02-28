@@ -98,7 +98,7 @@ class _StepTrackerScreenState extends State<StepTrackerScreen> {
 
   void _addOrUpdate(DateTime date, double val) {
     String key = DateFormat('yyyy-MM-dd').format(date);
-    // VALIDASI: Cek apa hari ini sudah ada data
+    //  Cek apa hari ini sudah ada data
     int index = widget.data.indexWhere((e) => e.dateKey == key);
 
     setState(() {
@@ -153,11 +153,12 @@ class _StepTrackerScreenState extends State<StepTrackerScreen> {
   }
 }
 
-// NOTE: WaterTrackerScreen logicnya mirip dengan Steps, tinggal ganti parameter liternya aja.
+// WaterTrackerScreen logicnya mirip dengan Steps, tinggal ganti parameter liternya aja.
 class WaterTrackerScreen extends StatelessWidget { 
   final List<FitnessEntry> data;
   const WaterTrackerScreen({super.key, required this.data});
   // Implementasi CRUD Water mirip dengan Steps Tracker di atas.
   @override 
   Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text("Water Intake"))); }
+
 }
